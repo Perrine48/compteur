@@ -3,13 +3,13 @@
 <!-- Premier compteur -------------------------------------------------------->
 
 <form class="compteur1" action="index.php" method="post">
-        <input type="number" name="compt1" value="8000" disabled id="compt1">
+        <input type="text" name="compt1" value="8000" id="compt1" disabled>
         <button type="button" name="more1" id="more1">+</button>
         <button type="button" name="less1" id="less1">-</button>
 
         <div id="add1">
             <label for="toAdd1">Combien de points avez vous gagné ?</label>
-            <input type="number" name="toAdd1" id="toAdd1">
+            <input type="text" name="toAdd1" id="toAdd1">
             <input type="button" name="addOne" value="Ajouter" id="addOne">
             <input type="button" name="annule1" value="Annuler" id="annule1">
         </div>

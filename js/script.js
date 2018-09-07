@@ -70,9 +70,17 @@ $(document).ready(function() {
 
 /*Ajouts et retrait de points------------------------------------------------*/
 
-/*Variables des champs compteurs---------------------------------------------*/
-    var compt1 = $('#compt1').val();
-    var compt2 = $('#compt2').val();
+/*Variables nombre initial---------------------------------------------------*/
+    var init1 = 8000;
+    var init2 = 8000;
+
+/*Variables champs compteurs--------------------------------------------------*/
+    var compt1 = $('#compt1');
+    var compt2 = $('#compt2');
+
+/*Variables contenu champs compteurs------------------------------------------*/
+    var incompt1 = $('#compt1').val();
+    var incompt2 = $('#compt2').val();
 
 /*Variables boutons validation de l'ajout et du retrait----------------------*/
     var addOne = $('#addOne');
@@ -80,28 +88,32 @@ $(document).ready(function() {
     var addTwo = $('#addTwo');
     var removeTwo = $('#removeTwo');
 
-/*Variables champs de valeur à ajouter ou à retirer--------------------------*/
-    var toAdd1 = $('#toAdd1').val();
-    var toRemove1 = $('#toRemove1').val();
-    var toAdd2 = $('#toAdd2').val();
-    var toRemove2 = $('#toRemove2').val();
-
 /*Fonctions d'ajout de points------------------------------------------------*/
     $(addOne).click(function() {
-        compt1 += toAdd1;
+        var toAdd1 = $('#toAdd1').val();
+        init1 += parseInt(toAdd1);
+        $(compt1).attr('value', init1);
     })
 
     $(addTwo).click(function() {
-        compt2 += toAdd2;
+        var toAdd2 = $('#toAdd2').val();
+        init2 += parseInt(toAdd2);
+        $(compt2).attr('value', init2);
     })
 
 /*Fonctions de retraits de points--------------------------------------------*/
     $(removeOne).click(function() {
-        compt1 -= toRemove1;
+        var toRemove1 = $('#toRemove1').val();
+        init1 -= parseInt(toRemove1);
+        $(compt1).attr('value', init1);
     })
 
     $(removeTwo).click(function() {
-        compt2 -= toRemove2;
+        var toRemove2 = $('#toRemove2').val();
+        init2 -= parseInt(toRemove2);
+        $(compt2).attr('value', init2);
     })
+
+
 
 })
